@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, Phone } from 'lucide-react';
+import Link from 'next/link';
+
 
 const slides = [
     {
@@ -87,18 +90,39 @@ const HeroSlider: React.FC = () => {
                                 transition={{ delay: 0.8 }}
                                 className="space-x-4"
                             >
-                                <Button variant="outline" size="lg" className="bg-white text-gray-900 hover:bg-gray-200">
-                                    Book Now
+                                <Button
+                                    asChild
+                                    className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
+                                >
+                                    <Link
+                                        href="https://wa.me/+918318419334"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center"
+                                    >
+                                        <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                                        <span className="hidden sm:inline">Chat on WhatsApp</span>
+                                    </Link>
+
                                 </Button>
-                                <Button variant="outline" size="lg" className="border-white text-blue-950 hover:bg-white hover:text-gray-900">
-                                    Learn More
+                                <Button
+                                    asChild
+                                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
+                                >
+                                    <Link
+                                        href={`tel:+918318419334`}
+                                        className="inline-flex items-center justify-center"
+                                    >
+                                        <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                                        <span className="hidden sm:inline">Call Us</span>
+                                    </Link>
                                 </Button>
                             </motion.div>
                         </div>
                     </div>
                 </motion.div>
             </AnimatePresence>
-        </div>
+        </div >
     );
 };
 

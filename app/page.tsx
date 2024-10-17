@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Playfair_Display, Raleway } from 'next/font/google';
-import Footer from '@/components/Footer';
 import HeroSlider from '@/components/HeroSlider';
 import AmenitiesGrid from '@/components/Amenities';
 import Amenities from '@/components/Amenities';
+import TestimonialsSection from '@/components/Testimonials';
+import ContactForm from '@/components/ContactForm';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 const raleway = Raleway({ subsets: ['latin'] });
@@ -34,9 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <Amenities />
-      </section>
+      <Amenities />
 
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-6">
@@ -58,7 +57,11 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <TestimonialsSection />
+
+      <ContactForm />
+
+
     </main>
   );
 }
