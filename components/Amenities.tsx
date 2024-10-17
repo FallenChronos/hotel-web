@@ -9,41 +9,41 @@ const amenities = [
     icon: Wifi,
     title: 'Free Wi-Fi',
     description: 'Stay connected with our high-speed internet access throughout the hotel.',
-    image: '/api/placeholder/400/300'
+    image: '/images/wifi.jpg'
   },
   {
     icon: Coffee,
     title: 'Coffee Bar',
     description: 'Enjoy complimentary coffee and tea in our cozy lounge area.',
-    image: '/api/placeholder/400/300'
+    image: '/images/coffee.jpg'
   },
   {
     icon: Dumbbell,
     title: 'Fitness Center',
     description: 'Keep up with your workout routine in our fully-equipped gym.',
-    image: '/api/placeholder/400/300'
+    image: '/images/fitness.jpg'
   },
   {
     icon: Utensils,
     title: 'Restaurant',
     description: 'Savor delicious meals at our in-house restaurant with a varied menu.',
-    image: '/api/placeholder/400/300'
+    image: '/images/food.jpg'
   },
   {
     icon: Car,
     title: 'Parking',
     description: 'Convenient on-site parking available for all our guests.',
-    image: '/api/placeholder/400/300'
+    image: '/images/car-cab.jpg'
   },
   {
     icon: Waves,
     title: 'Pool',
     description: 'Relax and unwind in our beautiful swimming pool area.',
-    image: '/api/placeholder/400/300'
+    image: '/images/swimming-pool.jpg'
   },
 ];
 
-const AmenityCard = ({ icon: Icon, title, description, image }) => {
+const AmenityCard = ({ icon: Icon, title, description, image }: { icon: any, title: string, description: string, image: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -60,12 +60,12 @@ const AmenityCard = ({ icon: Icon, title, description, image }) => {
         <img
           src={image}
           alt={title}
-          className="object-cover w-full h-full transition-all duration-300 group-hover:blur-sm"
+          className="object-cover w-full h-full transition-all duration-300 group-hover:blur-sm brightness-50"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
-          <Icon className="w-12 h-12 mb-2 text-yellow-400" />
-          <h3 className="text-xl font-semibold text-center">{title}</h3>
+          <Icon className="w-12 h-12 mb-2 text-yellow-300" />
+          <h3 className="text-2xl font-semibold text-center shadow-sm">{title}</h3>
           <motion.p
             className="mt-2 text-sm text-center opacity-0 group-hover:opacity-100"
             initial={{ height: 0 }}

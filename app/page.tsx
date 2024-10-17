@@ -14,7 +14,7 @@ export default function Home() {
     <main className={`min-h-screen ${raleway.className}`}>
       <HeroSlider />
 
-      <section className="py-20 bg-white">
+      <section id='rooms' className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <h2 className={`text-4xl font-bold text-center mb-12 ${playfair.className}`}>Our Exquisite Rooms</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

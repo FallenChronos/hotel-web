@@ -25,7 +25,7 @@ const Footer = () => {
                     <div>
                         <h5 className={`text-xl font-semibold mb-4 ${playfair.className}`}>Contact</h5>
                         <ul className="space-y-2">
-                            <li className="text-gray-400">123 Luxury Lane, Cityville</li>
+                            <li className="text-gray-400">Marchikote Square, Puri, Odisha 752001</li>
                             <li className="text-gray-400">Phone: +1 (555) 123-4567</li>
                             <li className="text-gray-400">Email: info@luxehaven.com</li>
                         </ul>
@@ -35,7 +35,7 @@ const Footer = () => {
                         <div className="flex space-x-4">
                             {['facebook', 'instagram', 'twitter'].map((social) => (
                                 <a key={social} href="#" className="text-gray-400 hover:text-white transition duration-300">
-                                    <Image src={`/images/${social}-icon.svg`} alt={social} width={24} height={24} />
+                                    <Image src={`/images/${social}-icon.svg`} alt={social} width={30} height={30} />
                                 </a>
                             ))}
                         </div>

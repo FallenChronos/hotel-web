@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
     {
-        image: '/images/slider1.jpg',
-        title: 'Welcome to Luxe Haven',
-        address: '123 Luxury Lane, Cityville',
+        image: '/images/slider1.jpeg',
+        title: 'Welcome to Hotel Agrawal Pride',
+        address: 'Marchikote Square, Puri, Odisha 752001',
         subtitle: 'Experience Unparalleled Luxury',
     },
     {

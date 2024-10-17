@@ -6,7 +6,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
-const navItems = ['Home', 'Rooms', 'Dining', 'Spa', 'Contact'];
+const navItems = [
+    {
+        title: 'Home',
+        path: '/'
+    },
+    {
+        title: 'Rooms',
+        path: '#rooms'
+    },
+    {
+        title: 'Dining',
+        path: '/dining'
+    },
+    {
+        title: 'Spa',
+        path: '/spa'
+    },
+    {
+        title: 'Contact',
+        path: '/contact'
+    }];
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +42,7 @@ const Header = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-6">
                         {navItems.map((item) => (
-                            <a key={item} href="#" className="text-gray-600 hover:text-gray-900 transition duration-300">{item}</a>
+                            <a key={item.title} href={item.path} className="text-gray-600 hover:text-gray-900 transition duration-300">{item.title}</a>
                         ))}
                     </div>
 
@@ -61,7 +81,7 @@ const Header = () => {
                             </button>
                             <div className="flex flex-col space-y-4">
                                 {navItems.map((item) => (
-                                    <a key={item} href="#" className="text-gray-600 hover:text-gray-900 transition duration-300">{item}</a>
+                                    <a key={item.title} href={item.path} className="text-gray-600 hover:text-gray-900 transition duration-300">{item.title}</a>
                                 ))}
                             </div>
                         </div>
