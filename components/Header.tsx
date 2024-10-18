@@ -17,15 +17,15 @@ const navItems = [
     },
     {
         title: 'Dining',
-        path: '/dining'
+        path: '#dining'
     },
     {
-        title: 'Spa',
-        path: '/spa'
+        title: 'Services',
+        path: '#services'
     },
     {
         title: 'Contact',
-        path: '/contact'
+        path: '#contact'
     }];
 
 const Header = () => {

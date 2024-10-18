@@ -3,6 +3,24 @@ import { Playfair_Display } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
+const navItems = [
+    {
+        title: 'Rooms',
+        path: '#rooms'
+    },
+    {
+        title: 'Dining',
+        path: '#dining'
+    },
+    {
+        title: 'Services',
+        path: '#services'
+    },
+    {
+        title: 'Contact',
+        path: '#contact'
+    }];
+
 const Footer = () => {
     return (
         <footer className="bg-gray-800 text-white py-12">
@@ -15,9 +33,9 @@ const Footer = () => {
                     <div>
                         <h5 className={`text-xl font-semibold mb-4 ${playfair.className}`}>Quick Links</h5>
                         <ul className="space-y-2">
-                            {['About Us', 'Rooms & Suites', 'Dining', 'Spa & Wellness'].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-gray-400 hover:text-white transition duration-300">{item}</a>
+                            {navItems.map((item) => (
+                                <li key={item.title}>
+                                    <a href={item.path} className="text-gray-400 hover:text-white transition duration-300">{item.title}</a>
                                 </li>
                             ))}
                         </ul>
@@ -26,14 +44,14 @@ const Footer = () => {
                         <h5 className={`text-xl font-semibold mb-4 ${playfair.className}`}>Contact</h5>
                         <ul className="space-y-2">
                             <li className="text-gray-400">Marchikote Square, Puri, Odisha 752001</li>
-                            <li className="text-gray-400">Phone: +1 (555) 123-4567</li>
-                            <li className="text-gray-400">Email: info@luxehaven.com</li>
+                            <li className="text-gray-400">Phone: +919101848976</li>
+                            <li className="text-gray-400">Email: hotalprideagrwal@gmail.com</li>
                         </ul>
                     </div>
                     <div>
                         <h5 className={`text-xl font-semibold mb-4 ${playfair.className}`}>Follow Us</h5>
                         <div className="flex space-x-4">
-                            {['facebook', 'instagram', 'twitter'].map((social) => (
+                            {['facebook', 'instagram', 'map'].map((social) => (
                                 <a key={social} href="#" className="text-gray-400 hover:text-white transition duration-300">
                                     <Image src={`/images/${social}-icon.svg`} alt={social} width={30} height={30} />
                                 </a>

@@ -28,7 +28,7 @@ const Rooms = () => {
                         <div key={room.name} className="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl border border-gray-200">
                             <div className="relative">
                                 <Image
-                                    src={`/images/${room.name.toLowerCase().replace(' ', '-')}.jpeg`}
+                                    src={`/images/property/${room.name.toLowerCase().replace(' ', '-')}.jpeg`}
                                     alt={room.name}
                                     width={400}
                                     height={300}
@@ -50,7 +50,7 @@ const Rooms = () => {
                                     </div>
                                 </div>
                                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                                    <Link href={"tel:+918318419334"}>Book Now</Link>
+                                    <Link href={"tel:+919101848976"}>Book Now</Link>
                                 </Button>
                             </div>
                         </div>

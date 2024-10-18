@@ -1,15 +1,15 @@
 'use client'
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
+import { Mail, MessageSquare, Phone, Send, User } from 'lucide-react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import * as z from 'zod';
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -47,7 +47,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="relative py-16 bg-gray-100">
+        <section id='contact' className="relative py-16 bg-gray-100">
             <div className="absolute inset-0 bg-cover bg-center brightness-50" style={{ backgroundImage: "url('/images/room-service.jpg')" }} />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
             <div className="relative container mx-auto px-4">

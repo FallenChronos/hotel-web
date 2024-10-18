@@ -19,7 +19,7 @@ export default function Home() {
 
       <Amenities />
 
-      <section className="py-20 bg-gray-900 text-white">
+      <section id='dining' className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-6">
           <h2 className={`text-4xl font-bold text-center mb-12 ${playfair.className}`}>Experience Culinary Excellence</h2>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -29,7 +29,7 @@ export default function Home() {
             <div className="md:w-1/2 md:pl-12">
               <h3 className={`text-3xl font-semibold mb-4 ${playfair.className}`}>Gourmet Delights</h3>
               <p className="text-gray-300 mb-6">
-                Indulge in a culinary journey crafted by world-renowned chefs. Our restaurants offer a fusion of international flavors and local specialties, ensuring an unforgettable dining experience.
+                Indulge in a culinary journey crafted by our chefs. Our restaurants offer a fusion of international flavors and local specialties, ensuring an unforgettable dining experience.
               </p>
               <Button variant="outline" size="lg" className="bg-white text-gray-900 hover:bg-gray-200">
                 Explore Dining Options

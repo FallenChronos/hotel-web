@@ -10,31 +10,31 @@ import Link from 'next/link';
 
 const slides = [
     {
-        image: '/images/slider1.jpeg',
+        image: '/images/property/slider1.jpeg',
         title: 'Welcome to Hotel Agrawal Pride',
         address: 'Marchikote Square, Puri, Odisha 752001',
         subtitle: 'Experience Unparalleled Luxury',
     },
     {
-        image: '/images/slider2.jpeg',
+        image: '/images/property/slider2.jpeg',
         title: 'Exquisite Accommodations',
         address: 'In the Heart of Downtown',
         subtitle: 'Your Home Away From Home',
     },
     {
-        image: '/images/slider3.jpeg',
-        title: 'Celebrate with Us',
-        address: 'Keep up the party wibe evrywhere',
-        subtitle: 'Let us help you out',
+        image: '/images/property/slider3.jpeg',
+        title: 'Experience Culinary Excellence',
+        address: 'Indulge in dishes crafted by our chefs. ',
+        subtitle: 'Select from a wide range of international flavors and local specialties.',
     },
     {
-        image: '/images/slider4.jpeg',
+        image: '/images/property/slider4.jpeg',
         title: 'Relax and Unwind',
         address: 'Oasis in the City',
         subtitle: 'Indulge in Pure Bliss',
     },
     {
-        image: '/images/slider5.jpeg',
+        image: '/images/property/slider5.jpeg',
         title: 'Your Occasions are our celebrations',
         address: 'Organize your events with us',
         subtitle: 'We take care of all the events.',
@@ -107,7 +107,7 @@ const HeroSlider = () => {
                                     className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
                                 >
                                     <Link
-                                        href="https://wa.me/+918318419334"
+                                        href="https://wa.me/+919101848976"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center"
@@ -122,7 +122,7 @@ const HeroSlider = () => {
                                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
                                 >
                                     <Link
-                                        href={`tel:+918318419334`}
+                                        href={`tel:+919101848976`}
                                         className="inline-flex items-center justify-center"
                                     >
                                         <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />

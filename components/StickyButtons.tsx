@@ -6,7 +6,7 @@ import { Hotel, X, Phone, MessageCircle } from 'lucide-react';
 
 const StickyContactButton = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const phoneNumber = "+918318419334";
+    const phoneNumber = "+919101848976";
 
     const buttonVariants = {
         closed: { rotate: 0 },

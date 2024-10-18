@@ -48,6 +48,7 @@ const AmenityCard = ({ icon: Icon, title, description, image }: { icon: any, tit
 
   return (
     <motion.div
+      id='services'
       className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
