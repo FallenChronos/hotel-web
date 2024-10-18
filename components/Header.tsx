@@ -37,7 +37,7 @@ const Header = () => {
         <header className="fixed w-full z-50 bg-white shadow-md">
             <nav className="container mx-auto px-6 py-3">
                 <div className="flex justify-between items-center">
-                    <a href="#" className={`text-2xl font-bold text-gray-800 ${playfair.className}`}>Hotel Agrawal Pride</a>
+                    <a href="/" className={`text-2xl font-bold text-gray-800 ${playfair.className}`}>Hotel Agrawal Pride</a>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-6">

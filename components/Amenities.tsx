@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Wifi, Coffee, Dumbbell, Utensils, Car, Waves } from 'lucide-react';
+import { Wifi, Coffee, HandPlatter, Utensils, Car, Waves } from 'lucide-react';
 
 const amenities = [
   {
@@ -13,27 +13,27 @@ const amenities = [
   },
   {
     icon: Coffee,
-    title: 'Coffee Bar',
+    title: 'Complimentary Breakfast',
     description: 'Enjoy complimentary coffee and tea in our cozy lounge area.',
-    image: '/images/coffee.jpg'
+    image: '/images/breakfast.jpeg'
   },
   {
-    icon: Dumbbell,
-    title: 'Fitness Center',
-    description: 'Keep up with your workout routine in our fully-equipped gym.',
-    image: '/images/fitness.jpg'
+    icon: HandPlatter,
+    title: '24/7 Quick Service',
+    description: 'We have a well trained and dedicated staff available round the clock availabe at your service.',
+    image: '/images/room-service.jpg'
   },
   {
     icon: Utensils,
     title: 'Restaurant',
-    description: 'Savor delicious meals at our in-house restaurant with a varied menu.',
+    description: 'Savor delicious meals at our in-house restaurant with a varied menu including local cuisine.',
     image: '/images/food.jpg'
   },
   {
     icon: Car,
-    title: 'Parking',
-    description: 'Convenient on-site parking available for all our guests.',
-    image: '/images/car-cab.jpg'
+    title: 'Local Cab and Parking',
+    description: 'Available city wide cab including pickup and drop along with convenient on-site parking available for all our guests.',
+    image: '/images/car-cab.jpeg'
   },
   {
     icon: Waves,

@@ -16,20 +16,32 @@ const slides = [
         subtitle: 'Experience Unparalleled Luxury',
     },
     {
-        image: '/images/slider2.jpg',
+        image: '/images/slider2.jpeg',
         title: 'Exquisite Accommodations',
         address: 'In the Heart of Downtown',
         subtitle: 'Your Home Away From Home',
     },
     {
-        image: '/images/slider3.jpg',
+        image: '/images/slider3.jpeg',
+        title: 'Celebrate with Us',
+        address: 'Keep up the party wibe evrywhere',
+        subtitle: 'Let us help you out',
+    },
+    {
+        image: '/images/slider4.jpeg',
         title: 'Relax and Unwind',
         address: 'Oasis in the City',
         subtitle: 'Indulge in Pure Bliss',
     },
+    {
+        image: '/images/slider5.jpeg',
+        title: 'Your Occasions are our celebrations',
+        address: 'Organize your events with us',
+        subtitle: 'We take care of all the events.',
+    },
 ];
 
-const HeroSlider: React.FC = () => {
+const HeroSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
@@ -54,8 +66,8 @@ const HeroSlider: React.FC = () => {
                     <Image
                         src={slides[currentSlide].image}
                         alt={slides[currentSlide].title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill={true}
+                        style={{ objectFit: 'cover' }}
                         quality={100}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

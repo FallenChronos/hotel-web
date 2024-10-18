@@ -48,7 +48,7 @@ const ContactForm = () => {
 
     return (
         <section className="relative py-16 bg-gray-100">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/slider2.jpg')" }} />
+            <div className="absolute inset-0 bg-cover bg-center brightness-50" style={{ backgroundImage: "url('/images/room-service.jpg')" }} />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
             <div className="relative container mx-auto px-4">
                 <motion.h2

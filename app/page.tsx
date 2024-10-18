@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Amenities from '@/components/Amenities';
+import ContactForm from '@/components/ContactForm';
+import HeroSlider from '@/components/HeroSlider';
+import Rooms from '@/components/Rooms';
+import TestimonialsSection from '@/components/Testimonials';
 import { Button } from '@/components/ui/button';
 import { Playfair_Display, Raleway } from 'next/font/google';
-import HeroSlider from '@/components/HeroSlider';
-import AmenitiesGrid from '@/components/Amenities';
-import Amenities from '@/components/Amenities';
-import TestimonialsSection from '@/components/Testimonials';
-import ContactForm from '@/components/ContactForm';
+import Image from 'next/image';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 const raleway = Raleway({ subsets: ['latin'] });
@@ -15,25 +15,7 @@ export default function Home() {
     <main className={`min-h-screen ${raleway.className}`}>
       <HeroSlider />
 
-      <section id='rooms' className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className={`text-4xl font-bold text-center mb-12 ${playfair.className}`}>Our Exquisite Rooms</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Deluxe Suite', 'Executive Room', 'Penthouse Suite'].map((room) => (
-              <div key={room} className="bg-gray-100 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl">
-                <Image src={`/images/${room.toLowerCase().replace(' ', '-')}.jpg`} alt={room} width={400} height={300} className="w-full h-64 object-cover" />
-                <div className="p-6">
-                  <h3 className={`text-2xl font-semibold mb-2 ${playfair.className}`}>{room}</h3>
-                  <p className="text-gray-600 mb-4">Indulge in spacious comfort with breathtaking views.</p>
-                  <Button variant="link" className="text-blue-600 hover:text-blue-800 p-0">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Rooms />
 
       <Amenities />
 

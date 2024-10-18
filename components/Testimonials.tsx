@@ -10,31 +10,31 @@ const reviews = [
         id: 1,
         rating: 5,
         text: "Absolutely stunning hotel with impeccable service. The amenities were top-notch and the staff went above and beyond.",
-        author: "Emma Thompson"
+        author: "Abhishek Tripathi"
     },
     {
         id: 2,
         rating: 4,
         text: "Beautiful location and comfortable rooms. The restaurant offered delicious meals. Highly recommended!",
-        author: "Michael Chen"
+        author: "Rajeev Bansal"
     },
     {
         id: 3,
         rating: 5,
         text: "An unforgettable experience. The attention to detail in every aspect of our stay was remarkable.",
-        author: "Sophie Martin"
+        author: "Yogesh"
     },
     {
         id: 4,
         rating: 5,
         text: "Luxurious accommodations and breathtaking views. The spa treatments were incredibly relaxing.",
-        author: "James Wilson"
+        author: "Vikas Verma"
     },
     {
         id: 5,
         rating: 4,
         text: "Great value for a high-end hotel. The fitness center and pool area were highlights of our stay.",
-        author: "Olivia Brown"
+        author: "Radhika"
     }
 ];
 
