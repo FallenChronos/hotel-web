@@ -1,15 +1,16 @@
 'use client'
 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Phone, Send, User } from 'lucide-react';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import * as z from 'zod';
-import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -20,7 +21,7 @@ const formSchema = z.object({
 
 type FormSchemaType = z.infer<typeof formSchema>;
 
-const ContactForm = () => {
+const ContactUsSection: React.FC = () => {
     const { toast } = useToast();
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormSchemaType>({
         resolver: zodResolver(formSchema),
@@ -28,26 +29,37 @@ const ContactForm = () => {
 
     const onSubmit: SubmitHandler<FormSchemaType> = async (data) => {
         try {
-            // Simulating an API call
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await emailjs.send(
+                'service_k0tjzi9',
+                'template_oguryi2',
+                {
+                    from_name: data.name,
+                    to_name: "Dr. Pragya Tripathi",
+                    from_email: data.email,
+                    to_email: "swaracounsellingnest@gmail.com",
+                    message: data.message,
+                    contact: data.contact,
+                },
+                'w6_KwrmD_Mnb9BC_x'
+            );
 
             toast({
                 title: "Message Sent!",
-                description: "We've received your message and will get back to you soon.",
+                description: "Thank you. We will get back to you soon...",
                 className: "bg-green-500 text-white",
             });
             reset();
         } catch (error) {
             toast({
                 title: "Error",
-                description: "Failed to send message. Please try again later.",
+                description: "Ahh, something went wrong. Please try again.",
                 className: "bg-red-500 text-white",
             });
         }
     };
 
     return (
-        <section id='contact' className="relative py-16 bg-gray-100">
+        <section className="relative py-16 bg-gray-100">
             <div className="absolute inset-0 bg-cover bg-center brightness-50" style={{ backgroundImage: "url('/images/room-service.jpg')" }} />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
             <div className="relative container mx-auto px-4">
@@ -133,4 +145,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default ContactUsSection;

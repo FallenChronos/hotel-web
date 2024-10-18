@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Playfair_Display } from 'next/font/google';
+import Link from 'next/link';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
@@ -19,6 +20,20 @@ const navItems = [
     {
         title: 'Contact',
         path: '#contact'
+    }];
+
+const socialLinks = [
+    {
+        name: 'facebook',
+        link: "http://www.google.com"
+    },
+    {
+        name: 'instagram',
+        link: "http://www.google.com"
+    },
+    {
+        name: 'map',
+        link: "http://www.google.com"
     }];
 
 const Footer = () => {
@@ -51,10 +66,10 @@ const Footer = () => {
                     <div>
                         <h5 className={`text-xl font-semibold mb-4 ${playfair.className}`}>Follow Us</h5>
                         <div className="flex space-x-4">
-                            {['facebook', 'instagram', 'map'].map((social) => (
-                                <a key={social} href="#" className="text-gray-400 hover:text-white transition duration-300">
-                                    <Image src={`/images/${social}-icon.svg`} alt={social} width={30} height={30} />
-                                </a>
+                            {socialLinks.map((social) => (
+                                <Link key={social.name} href={social.link} className="text-gray-400 hover:text-white transition duration-300">
+                                    <Image src={`/images/${social.name}-icon.svg`} alt={social.name} width={30} height={30} />
+                                </Link>
                             ))}
                         </div>
                     </div>

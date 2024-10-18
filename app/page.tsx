@@ -1,6 +1,7 @@
 import Amenities from '@/components/Amenities';
 import ContactForm from '@/components/ContactForm';
 import HeroSlider from '@/components/HeroSlider';
+import ImageStrip from '@/components/ImageStrip';
 import Rooms from '@/components/Rooms';
 import TestimonialsSection from '@/components/Testimonials';
 import { Button } from '@/components/ui/button';
@@ -43,7 +44,7 @@ export default function Home() {
 
       <ContactForm />
 
-
+      <ImageStrip />
     </main>
   );
 }
