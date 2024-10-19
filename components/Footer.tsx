@@ -33,7 +33,7 @@ const socialLinks = [
     },
     {
         name: 'map',
-        link: "http://www.google.com"
+        link: "https://maps.app.goo.gl/9TmQN9g4R41nSgKM6"
     }];
 
 const Footer = () => {

@@ -30,8 +30,8 @@ const ContactUsSection: React.FC = () => {
     const onSubmit: SubmitHandler<FormSchemaType> = async (data) => {
         try {
             await emailjs.send(
-                'service_k0tjzi9',
-                'template_oguryi2',
+                'service_k',
+                'template_',
                 {
                     from_name: data.name,
                     to_name: "Dr. Pragya Tripathi",

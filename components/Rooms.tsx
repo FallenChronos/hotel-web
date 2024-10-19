@@ -1,9 +1,8 @@
-import Image from "next/image"
-import { Button } from "./ui/button"
 import { Playfair_Display } from 'next/font/google'
-import { BiBed, BiWifi, BiDrink } from 'react-icons/bi'
+import Image from "next/image"
+import { BiBed, BiDrink, BiWifi } from 'react-icons/bi'
 import { MdBalcony } from 'react-icons/md'
-import Link from "next/link"
+import { Button } from "./ui/button"
 
 const playfair = Playfair_Display({ subsets: ['latin'] })
 
@@ -49,8 +48,8 @@ const Rooms = () => {
                                         <MdBalcony className="text-gray-500 text-xl" />
                                     </div>
                                 </div>
-                                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                                    <Link href={"tel:+919101848976"}>Book Now</Link>
+                                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                                    <a href={"tel:+919101848976"}>Book Now</a>
                                 </Button>
                             </div>
                         </div>

@@ -106,7 +106,7 @@ const HeroSlider = () => {
                                     asChild
                                     className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
                                 >
-                                    <Link
+                                    <a
                                         href="https://wa.me/+919101848976"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -114,20 +114,20 @@ const HeroSlider = () => {
                                     >
                                         <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                                         <span className="hidden sm:inline">Chat on WhatsApp</span>
-                                    </Link>
+                                    </a>
 
                                 </Button>
                                 <Button
                                     asChild
                                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 group"
                                 >
-                                    <Link
+                                    <a
                                         href={`tel:+919101848976`}
                                         className="inline-flex items-center justify-center"
                                     >
                                         <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                                         <span className="hidden sm:inline">Call Us</span>
-                                    </Link>
+                                    </a>
                                 </Button>
                             </motion.div>
                         </div>
